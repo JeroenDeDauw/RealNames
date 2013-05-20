@@ -38,7 +38,7 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
  
 if ( !defined( 'MEDIAWIKI' ) ) {
-        die( 'This file is a MediaWiki extension, it is not a valid entry point' );
+	die( 'This file is a MediaWiki extension, it is not a valid entry point' );
 }
 
 /* (not our var to doc)
@@ -46,11 +46,11 @@ if ( !defined( 'MEDIAWIKI' ) ) {
  * @since 2011-09-16, 0.1
  */
 $wgExtensionCredits['parserhook'][] = array(
-  'name' => 'Realnames',
-  'author' =>array('[http://olivierbeaton.com/ Olivier Finlay Beaton]'), 
-  'version' => '0.3.1',
-  'url' => 'http://www.mediawiki.org/wiki/Extension:Realnames', 
-  'description' => 'Displays a user\'s real name everywhere',
+	'name' => 'Realnames',
+	'author' =>array('[http://olivierbeaton.com/ Olivier Finlay Beaton]'),
+	'version' => '0.4 alpha',
+	'url' => 'http://www.mediawiki.org/wiki/Extension:Realnames',
+	'description' => 'Displays a user\'s real name everywhere',
  );
 
 /**
@@ -86,11 +86,11 @@ $wgRealnamesBlank = false;
  * @since 2011-11-05, 0.1
  */
 $wgRealnamesReplacements = array(
-    'title' => TRUE,
-    'subtitle' => TRUE,
-    'personnal' => TRUE,
-    'body' => TRUE,
-  );
+	'title' => TRUE,
+	'subtitle' => TRUE,
+	'personnal' => TRUE,
+	'body' => TRUE,
+);
 
 /**
  * Possible styles to pick from, you can define new ones as well.
@@ -103,12 +103,12 @@ $wgRealnamesReplacements = array(
  * @since 2011-09-15, 0.1  
  */
 $wgRealnamesStyles = array( 
-    'standard' => '$1$2$4',
-    'append' => '$1$2$4 [$3]',
-    'replace' => '$1$3$4',
-    'reverse' => '$1$3$4 [$2]',
-    'dash' => '$1$2$4 &ndash; $3',
-  ); 
+	'standard' => '$1$2$4',
+	'append' => '$1$2$4 [$3]',
+	'replace' => '$1$3$4',
+	'reverse' => '$1$3$4 [$2]',
+	'dash' => '$1$2$4 &ndash; $3',
+);
   
 /**
  * Allows you to turn off smart behaviour.
@@ -116,8 +116,8 @@ $wgRealnamesStyles = array(
  * or turn off individual features.
  */
 $wgRealnamesSmart = array(
-    'same' => TRUE,
-  );
+	'same' => TRUE,
+);
   
 /**
  * extra namespaces names to look for.
@@ -161,7 +161,7 @@ if (isset($wgConfigureAdditionalExtensions) && is_array($wgConfigureAdditionalEx
  * Our extension class, it will load the first time the core tries to access it
  * @since 2011-09-16, 0.1  
  */ 
-$wgAutoloadClasses['ExtRealnames'] = dirname(__FILE__) . '/Realnames.body.php';
+$wgAutoloadClasses['ExtRealnames'] = dirname(__FILE__) . '/RealNames.body.php';
 
 /* (not our var to doc)
  * This hook is called before the article is displayed.  
